@@ -71,7 +71,7 @@
                                 <img :src="contact.avatar" alt="contact-[index]-pic" class="profile-image">
                                 <div>
                                     <p>{{contact.name}}</p>
-                                    <p class="grey-text">blablabla</p>
+                                    <p class="grey-text">Ultimo messaggio inviato</p>
                                 </div>
                             </li>
                         </ul>
@@ -102,12 +102,12 @@
 
                 <!-- CHAT -->
                 <section id="chat" class="row">
-                    <div class="messages-container row">
-                        <div class="my-messages">
-                            <p>fhsbfhbgsfhs</p>
+                    <div class="messages-container row" v-if="">
+                        <div class="my-messages" v-for="(contact, index) of contacts">
+                            <p>{{contact.messages[0].message}}</p>
                         </div>
 
-                        <div class="their-messages">
+                        <div class="their-messages" v-for>
                             <p>fhsbfhbgsfhs</p>
                         </div>
                     </div>
