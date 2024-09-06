@@ -24,74 +24,90 @@
 </head>
 
 <body>
-    <div class="container-fluid position-relative"></div>
+    <div id="app">
 
-    <!-- BLOCCO PRINCIPALE -->
-    <section id="main-block" class="row">
+        <!-- BLOCCO PRINCIPALE -->
+        <section id="main-block" class="row">
 
-        <!-- SEZIONE CONTATTI E RICERCA -->
-        <section id="left-contacts">
+            <!-- SEZIONE CONTATTI E RICERCA -->
+            <section id="left-contacts">
 
-            <!-- PROFILO UTENTE -->
-            <section id="personal-profile" class="row">
-                <a href="#"><img src="img/avatar_io.png" alt="my-pic" class="profile-image"></a>
-                <p>Sofia</p>
+                <!-- PROFILO UTENTE -->
+                <section id="personal-profile" class="row">
+                    <a href="#"><img src="img/avatar_io.png" alt="my-pic" class="profile-image"></a>
+                    <p>Sofia</p>
 
-                <div class="profile-ul">
-                    <ul class="row">
-                        <li><i class="fa-solid fa-circle-notch"></i></li>
-                        <li><i class="fa-solid fa-message"></i></li>
-                        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                    </ul>
+                    <div class="profile-ul">
+                        <ul class="row">
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-solid fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- NOTIFICHE -->
+                <section id="notifications" class="row">
+                    <i class="fa-solid fa-bell-slash" style="color: #ffffff;"></i>
+                    <p>Ricevi notifiche di nuovi messaggi <br>
+                        <a href="#">Attiva notifiche Desktop</a>
+                    </p>
+                </section>
+
+                <!-- SEZIONE RICERCA -->
+                <section id="search" class="row">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="   Cerca o inizia una nuova chat">
+                </section>
+
+                <!-- SEZIONE CONTATTI -->
+                <section id="contacts-list">
+                    <div class="overflow-contacts">
+                        <ul>
+                            <li class="row" v-for="(contact, index) of contacts">
+                                <img :src="contact.avatar" alt="contact-[index]-pic" class="profile-image">
+                                <div>
+                                    <p>{{contact.name}}</p>
+                                    <p class="grey-text">fsdhjfgs</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- SEZIONE DEI MESSAGGI -->
+            <section id="right-messages">
+
+                <!-- HEADER -->
+                <div id="header-chat" class="row">
+                    <a href="#"><img src="img/avatar_1.png" alt="avatar-pic" class="profile-image"></a>
+
+                    <div class="chat-header-icons">
+                        <ul class="row">
+                            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li><i class="fa-solid fa-paperclip"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
 
-            <!-- NOTIFICHE -->
-            <section id="notifications" class="row">
-                <i class="fa-solid fa-bell-slash" style="color: #ffffff;"></i>
-                <p>Ricevi notifiche di nuovi messaggi <br>
-                    <a href="#">Attiva notifiche Desktop</a>
-                </p>
-            </section>
+                <!-- CHAT -->
+                <section id="chat">
 
-            <!-- SEZIONE RICERCA -->
-            <section id="search" class="row">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" placeholder="   Cerca o inizia una nuova chat">
-            </section>
+                </section>
 
+                <!-- FOOTER -->
+                <section id="footer-chat" class="row">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="   Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </section>
+
+            </section>
         </section>
-
-        <!-- SEZIONE DEI MESSAGGI -->
-        <section id="right-messages">
-
-            <!-- HEADER -->
-            <div id="header-chat" class="row">
-                <a href="#"><img src="img/avatar_1.png" alt="avatar-pic" class="profile-image"></a>
-
-                <div class="chat-header-icons">
-                    <ul class="row">
-                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li><i class="fa-solid fa-paperclip"></i></li>
-                        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- CHAT -->
-            <section id="chat">
-
-            </section>
-
-            <!-- FOOTER -->
-            <section id="footer-chat" class="row">
-                <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="   Scrivi un messaggio">
-                <i class="fa-solid fa-microphone"></i>
-            </section>
-
-        </section>
-    </section>
+    </div>
 
 
     <!-- VUE -->
