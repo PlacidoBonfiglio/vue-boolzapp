@@ -25,14 +25,13 @@ div.container-fluid {
     right: 50%;
     transform: translate(50%);
     bottom: 2.5%;
-    box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 15px grey;
 }
 
 /* ! SEZIONE CONTATTI */
 #left-contacts {
     height: 100%;
     width: 40%;
-    background-color: rgb(255, 206, 206);
 }
 
 /* SEXIONE PROFILO UTENTE */
@@ -113,13 +112,64 @@ div.container-fluid {
 #right-messages {
     height: 100%;
     width: 60%;
-    background-color: rgb(240, 255, 171);
 }
 
 /* SEZIONE MESSAGGI HEADER */
-#actual-chat {
+#header-chat {
     height: 70px;
     background-color: #EAEAEA;
     align-items: center;
     border-left: 1px solid grey;
+}
+
+.chat-header-icons {
+    width: 100%;
+    padding-right: 30px;
+    color: grey;
+}
+
+.chat-header-icons ul {
+    justify-content: end;
+}
+
+.chat-header-icons li {
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* SEZIONE CHAT CENTRALE */
+#chat {
+    height: calc(100% - 140px);
+    background-image: url('../img/mine.png');
+    background-repeat: repeat;
+}
+
+#footer-chat {
+    height: 70px;
+    background-color: #F3EEEA;
+    align-items: center;
+    border-left: 1px solid grey;
+}
+
+/* SEZIONE CHAT FOOTER */
+#footer-chat {
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer-chat i {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+}
+
+#footer-chat input {
+    height: 60%;
+    flex-basis: 80%;
+    border: none;
+    border-radius: 10px;
 }
