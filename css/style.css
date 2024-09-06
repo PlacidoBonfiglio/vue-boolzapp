@@ -1,8 +1,14 @@
+/* UTILS */
+.row {
+    display: flex;
+}
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background: #DBDBD2;
+    font-family: "Lato", sans-serif;
 }
 
 div.container-fluid {
@@ -10,14 +16,110 @@ div.container-fluid {
     background-color: #009688;
 }
 
-/* BLOCCO PRINCIPALE */
+/* ! BLOCCO PRINCIPALE */
 #main-block {
-    height: 90%;
+    height: 95%;
     width: 80%;
     background-color: #fff;
     position: absolute;
     right: 50%;
     transform: translate(50%);
-    bottom: 5%;
+    bottom: 2.5%;
     box-shadow: 0 0 10px grey;
+}
+
+/* ! SEZIONE CONTATTI */
+#left-contacts {
+    height: 100%;
+    width: 40%;
+    background-color: rgb(255, 206, 206);
+}
+
+/* SEXIONE PROFILO UTENTE */
+#personal-profile {
+    height: 70px;
+    background-color: #EAEAEA;
+    align-items: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.profile-ul {
+    width: 100%;
+    padding-right: 20px;
+    color: grey;
+}
+
+#personal-profile ul {
+    justify-content: end;
+}
+
+#personal-profile li {
+    list-style-type: none;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* SEZIONE NOTIFICHE */
+#notifications {
+    height: 90px;
+    background-color: #8EDAFC;
+    align-items: center;
+}
+
+#notifications i {
+    font-size: 3rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#notifications p {
+    font-weight: bold;
+}
+
+#notifications a {
+    font-weight: normal;
+    color: grey;
+}
+
+/* SEZIONE RICERCA */
+#search {
+    height: 60px;
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-items: center;
+}
+
+#search i {
+    font-size: 1.5rem;
+    color: grey;
+    margin-right: 30px;
+}
+
+#search input {
+    width: 80%;
+    height: 70%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* ! SEZIONE MESSAGGI */
+#right-messages {
+    height: 100%;
+    width: 60%;
+    background-color: rgb(240, 255, 171);
+}
+
+/* SEZIONE MESSAGGI HEADER */
+#actual-chat {
+    height: 70px;
+    background-color: #EAEAEA;
+    align-items: center;
+    border-left: 1px solid grey;
 }
