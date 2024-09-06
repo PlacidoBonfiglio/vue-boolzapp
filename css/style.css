@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #DBDBD2;
+}
+
+div.container-fluid {
+    height: 150px;
+    background-color: #009688;
+}
+
+/* BLOCCO PRINCIPALE */
+#main-block {
+    height: 90%;
+    width: 80%;
+    background-color: #fff;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    bottom: 5%;
+    box-shadow: 0 0 10px grey;
+}
