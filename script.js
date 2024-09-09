@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             myMessage: '',
+            recivedMessage: 'Ok',
             contacts: [
                 {
                     name: 'Michele',
