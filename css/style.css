@@ -1,4 +1,4 @@
-/* UTILS */
+/* ! UTILS */
 .row {
     display: flex;
 }
@@ -156,7 +156,6 @@ i:hover {
     color: grey;
 }
 
-
 /* ! SEZIONE MESSAGGI */
 #right-messages {
     height: 100%;
@@ -171,21 +170,8 @@ i:hover {
     border-left: 1px solid lightgray;
 }
 
-.chat-header-icons {
-    width: 100%;
-    padding-right: 30px;
-    color: grey;
-}
-
-.chat-header-icons ul {
-    justify-content: end;
-}
-
-.chat-header-icons li {
-    list-style-type: none;
-    margin-left: 30px;
-    font-size: 1.5rem;
-    cursor: pointer;
+.actual-user-chat {
+    width: 70%;
 }
 
 .actual-user-chat p {
@@ -198,6 +184,24 @@ i:hover {
     font-size: 1rem;
     font-weight: normal;
     color: grey;
+}
+
+.chat-header-icons {
+    width: 30%;
+    color: grey;
+    padding-right: 30px;
+}
+
+.chat-header-icons ul {
+    justify-content: end;
+    padding: 0;
+}
+
+.chat-header-icons li {
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* SEZIONE CHAT CENTRALE */
@@ -238,15 +242,24 @@ i:hover {
     align-self: flex-start;
 }
 
+.my-messages p:first-child,
+.their-messages p:first-child {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.time-message {
+    font-size: 0.7rem;
+    text-align: end;
+    margin-top: 5px;
+}
+
+/* SEZIONE CHAT FOOTER */
 #footer-chat {
     height: 70px;
     background-color: #F3EEEA;
     align-items: center;
     border-left: 1px solid lightgray;
-}
-
-/* SEZIONE CHAT FOOTER */
-#footer-chat {
     align-items: center;
     justify-content: space-around;
 }

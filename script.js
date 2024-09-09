@@ -173,6 +173,10 @@ createApp({
 
     methods: {
 
+    },
+
+    computed: {
+
     }
 
 }).mount('#app');

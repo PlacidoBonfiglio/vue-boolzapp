@@ -29,10 +29,10 @@
         <!-- "HEADER" VERDE -->
         <div class="green-header"></div>
 
-        <!-- BLOCCO PRINCIPALE -->
+        <!-- ! BLOCCO PRINCIPALE -->
         <section id="main-block" class="row">
 
-            <!-- SEZIONE CONTATTI E RICERCA -->
+            <!-- ! SEZIONE CONTATTI E RICERCA -->
             <section id="left-contacts">
 
                 <!-- PROFILO UTENTE -->
@@ -71,7 +71,7 @@
                                 <img :src="contact.avatar" alt="contact-[index]-pic" class="profile-image">
                                 <div>
                                     <p>{{contact.name}}</p>
-                                    <p class="grey-text">Ultimo messaggio inviato</p>
+                                    <p class="grey-text">Ultimo messaggio inviato alle 12:00</p>
                                 </div>
                             </li>
                         </ul>
@@ -80,15 +80,15 @@
 
             </section>
 
-            <!-- SEZIONE DEI MESSAGGI -->
+            <!-- ! SEZIONE DEI MESSAGGI -->
             <section id="right-messages">
 
                 <!-- HEADER -->
                 <div id="header-chat" class="row">
                     <a href="#"><img src="img/avatar_1.png" alt="avatar-pic" class="profile-image"></a>
                     <div class="actual-user-chat">
-                        <p>Amerigo</p>
-                        <p>blablabla</p>
+                        <p>Michele</p>
+                        <p>Ultimo accesso alle 12:00</p>
                     </div>
 
                     <div class="chat-header-icons">
@@ -102,13 +102,15 @@
 
                 <!-- CHAT -->
                 <section id="chat" class="row">
-                    <div class="messages-container row" v-if="">
-                        <div class="my-messages" v-for="(contact, index) of contacts">
+                    <div class="messages-container row">
+                        <div class="my-messages" v-for="contact of contacts">
                             <p>{{contact.messages[0].message}}</p>
+                            <p class="time-message">{{contact.messages[0].date}}</p>
                         </div>
 
-                        <div class="their-messages" v-for>
-                            <p>fhsbfhbgsfhs</p>
+                        <div class="their-messages">
+                            <p>Ciao come va la vita?</p>
+                            <p class="time-message">12:00</p>
                         </div>
                     </div>
 
@@ -126,6 +128,10 @@
         </section>
     </div>
 
+    <!-- LUXON -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js">
+    </script>
 
     <!-- VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
