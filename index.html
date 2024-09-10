@@ -116,7 +116,7 @@
                 <section id="footer-chat" class="row">
                     <i class="fa-regular fa-face-smile"></i>
                     <input type="text" placeholder="   Scrivi un nuovo messaggio" v-model="myMessage"
-                        @keyup.enter="sendNewMessage(myMessage), reciveNewMessage(recivedMessage)">
+                        @keyup.enter="sendNewMessage(myMessage), myMessage = '', reciveNewMessage(recivedMessage)">
                     <i class="fa-solid fa-microphone"></i>
                 </section>
 
