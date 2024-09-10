@@ -215,6 +215,7 @@ i:hover {
     background-repeat: repeat;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
 
 /* MESSAGGI */
