@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            search: '',
             myMessage: '',
             recivedMessage: 'Ok',
             activeContact: 0,
@@ -200,11 +201,15 @@ createApp({
                     }
                 );
             }, 1000);
-        }
+        },
+
+
     },
 
     computed: {
-
+        filteredContacts() {
+            this.contacts.filter(contact => contact.name.includes(this.search))
+        }
     }
 
 }).mount('#app');
