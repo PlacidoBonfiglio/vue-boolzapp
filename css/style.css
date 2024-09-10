@@ -227,7 +227,7 @@ i:hover {
     align-items: flex-end;
 }
 
-.my-messages {
+.sent-messages {
     max-width: 450px;
     background-color: #D5F9BA;
     border-radius: 10px;
@@ -236,7 +236,7 @@ i:hover {
     margin: 10px 0;
 }
 
-.their-messages {
+.recived-messages {
     max-width: 450px;
     background-color: white;
     border-radius: 10px;

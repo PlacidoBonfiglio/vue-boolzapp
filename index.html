@@ -67,7 +67,7 @@
                 <section id="contacts-list">
                     <div class="overflow-contacts">
                         <ul>
-                            <li class="row" v-for="(contact, index) of contacts" @click="">
+                            <li class="row" v-for="(contact, index) of contacts" @click="setActiveContact(index)">
                                 <img :src="contact.avatar" alt="contact-[index]-pic" class="profile-image">
                                 <div>
                                     <p>{{contact.name}}</p>
@@ -85,7 +85,7 @@
 
                 <!-- HEADER -->
                 <div id="header-chat" class="row">
-                    <a href="#"><img src="img/avatar_1.png" alt="avatar-pic" class="profile-image"></a>
+                    <a href="#"><img :src="contacts[activeContact].avatar" alt="avatar-pic" class="profile-image"></a>
                     <div class="actual-user-chat">
                         <p>Michele</p>
                         <p>Ultimo accesso alle 12:00</p>
@@ -103,14 +103,9 @@
                 <!-- CHAT -->
                 <section id="chat" class="row">
                     <div class="messages-container row">
-                        <div class="my-messages" v-for="(message, index) in contacts[activeContact].messages">
+                        <div class="sent-messages" v-for="message in contacts[activeContact].messages">
                             <p>{{message.message}}</p>
                             <p class="time-message">{{message.date}}</p>
-                        </div>
-
-                        <div class="their-messages">
-                            <p>Ciao, come va la vita?</p>
-                            <p class="time-message">12:00</p>
                         </div>
                     </div>
 
