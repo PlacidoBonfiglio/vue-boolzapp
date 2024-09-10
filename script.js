@@ -179,11 +179,11 @@ createApp({
             console.log(index);
         },
 
-        sendNewMessage() {
-            this.contacts[0].messages.push(
+        sendNewMessage(myText) {
+            this.contacts[this.activeContact].messages.push(
                 {
                     date: '10/01/2020 15:50:00',
-                    message: 'myMessage',
+                    message: myText,
                     status: 'sent'
                 }
             )
