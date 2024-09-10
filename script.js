@@ -179,14 +179,26 @@ createApp({
             console.log(index);
         },
 
-        sendNewMessage(myText) {
+        sendNewMessage(myNewBoolzapMessage) {
             this.contacts[this.activeContact].messages.push(
                 {
                     date: '10/01/2020 15:50:00',
-                    message: myText,
+                    message: myNewBoolzapMessage,
                     status: 'sent'
                 }
             )
+        },
+
+        reciveNewMessage(boolzapAnswer) {
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push(
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: boolzapAnswer,
+                        status: 'recived'
+                    }
+                );
+            }, 1000);
         }
     },
 
