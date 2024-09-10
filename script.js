@@ -177,6 +177,16 @@ createApp({
         setActiveContact(index) {
             this.activeContact = index;
             console.log(index);
+        },
+
+        sendNewMessage() {
+            this.contacts[0].messages.push(
+                {
+                    date: '10/01/2020 15:50:00',
+                    message: 'myMessage',
+                    status: 'sent'
+                }
+            )
         }
     },
 
