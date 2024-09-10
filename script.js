@@ -208,7 +208,7 @@ createApp({
 
     computed: {
         filteredContacts() {
-            this.contacts.filter(contact => contact.name.includes(this.search))
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.search.toLowerCase()));
         }
     }
 
