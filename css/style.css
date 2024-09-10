@@ -246,8 +246,8 @@ i:hover {
     align-self: flex-start;
 }
 
-.my-messages p:first-child,
-.their-messages p:first-child {
+.sent-messages p:first-child,
+.recived-messages p:first-child {
     margin-top: 10px;
     margin-bottom: 0;
 }

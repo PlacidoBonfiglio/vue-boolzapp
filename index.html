@@ -103,7 +103,8 @@
                 <!-- CHAT -->
                 <section id="chat" class="row">
                     <div class="messages-container row">
-                        <div class="sent-messages" v-for="message in contacts[activeContact].messages">
+                        <div v-for="message in contacts[activeContact].messages"
+                            :class="(message.status === 'sent') ? 'sent-messages' : 'recived-messages'">
                             <p>{{message.message}}</p>
                             <p class="time-message">{{message.date}}</p>
                         </div>

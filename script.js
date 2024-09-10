@@ -176,7 +176,7 @@ createApp({
     methods: {
         setActiveContact(index) {
             this.activeContact = index;
-            console.log(index)
+            console.log(index);
         }
     },
 
