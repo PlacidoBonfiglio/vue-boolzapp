@@ -186,14 +186,15 @@ createApp({
                     message: myNewBoolzapMessage,
                     status: 'sent'
                 }
-            )
+            );
+
         },
 
         reciveNewMessage(boolzapAnswer) {
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push(
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '10/01/2020 15:51:00',
                         message: boolzapAnswer,
                         status: 'recived'
                     }

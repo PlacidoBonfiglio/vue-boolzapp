@@ -67,7 +67,8 @@
                 <section id="contacts-list">
                     <div class="overflow-contacts">
                         <ul>
-                            <li class="row" v-for="(contact, index) of contacts" @click="setActiveContact(index)">
+                            <li class="row" v-for="(contact, index) of contacts" @click="setActiveContact(index)"
+                                :class="(activeContact == index) ? 'active' : ''">
                                 <img :src="contact.avatar" alt="contact-[index]-pic" class="profile-image">
                                 <div>
                                     <p>{{contact.name}}</p>
