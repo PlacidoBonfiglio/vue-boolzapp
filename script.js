@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const dateTime = luxon.DateTime;
 
 createApp({
     data() {
@@ -209,7 +210,7 @@ createApp({
     computed: {
         filteredContacts() {
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.search.toLowerCase()));
-        }
+        },
     }
 
 }).mount('#app');
